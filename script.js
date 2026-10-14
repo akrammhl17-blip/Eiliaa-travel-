@@ -1,0 +1,10 @@
+var N="213662073415",L=document.documentElement.lang;
+document.querySelectorAll("[data-wa]").forEach(function(a){a.href="https://wa.me/"+N+"?text="+encodeURIComponent(a.getAttribute("data-wa"))});
+document.addEventListener("click",function(e){if(e.target.closest(".l a"))document.body.classList.remove("mo")});
+var f=document.getElementById("f");
+if(f)f.addEventListener("submit",function(e){e.preventDefault();var v=function(i){return document.getElementById(i).value};
+var t=(L=="fr"?"Nouvelle demande :\nNom : ":"طلب جديد:\nالاسم: ")+v("n")+(L=="fr"?"\nTéléphone : ":"\nالهاتف: ")+v("p")+(L=="fr"?"\nService : ":"\nالخدمة: ")+v("s")+(L=="fr"?"\nDestination : ":"\nالوجهة: ")+v("d")+(L=="fr"?"\nDate : ":"\nالتاريخ: ")+v("t")+(L=="fr"?"\nNotes : ":"\nملاحظات: ")+v("m");
+window.open("https://wa.me/"+N+"?text="+encodeURIComponent(t),"_blank")});
+document.querySelectorAll(".c,details,form,.mp,.ab>*").forEach(function(e){e.classList.add("r")});
+var io=new IntersectionObserver(function(l){l.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll(".r").forEach(function(e){io.observe(e)});
